@@ -1,4 +1,4 @@
-name: Send  Email
+name: Send Email
 
 # Controls when the workflow will run
 on:
