@@ -7,6 +7,11 @@ on:
    repository_dispatch:
    
    workflow_dispatch:
+     inputs:
+        environment:
+           options: ['dev','test','prod']
+        run_tag:
+           options: ['test1','test2']
    
   # Triggers the workflow on push or pull request events but only for the "main" branch
   #push:
@@ -44,3 +49,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo ${{github.event.inputs.environment}}
